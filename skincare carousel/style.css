@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Solway:wght@300;400;500;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.product-container{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.product-content{
+    padding: 20px 50px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.product-content::-webkit-scrollbar {
+    display: none;
+}
+  
+.card{
+    flex: 0 0 auto;
+    /* width: 100%; */
+    width: 250px;
+    border-radius: 30px;
+    margin-right: 10px;
+    box-shadow: 9px 9px 5px 0px rgba(194,194,194,0.75);
+    -webkit-box-shadow: 9px 9px 5px 0px rgba(194,194,194,0.75);
+    -moz-box-shadow: 9px 9px 5px 0px rgba(194,194,194,0.75);
+}
+
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 100%;
+}
+
+.card-image img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    object-fit: cover;
+}
+
+.card-detail{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.card-detail h1{
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+
+.card-detail p{
+    font-size: 0.8rem;
+    text-align: justify;
+    color: rgb(60, 60, 60);
+    padding-bottom: 5px;
+}
+
+.add-button{
+    margin-top: 5px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    border: transparent;
+    background-color: lightblue;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+.card:hover .add-button{
+    opacity: 1;
+}
+
+.add-button:hover{
+    background-color: rgb(205, 224, 230);
+}
+
+
+#prev-btn,
+#next-btn{
+    position: absolute;
+    top: 40%;
+    background-color: rgb(141, 141, 141);
+    cursor: pointer;
+    z-index: 8;
+    font-size: 3.5rem;
+    opacity: 0.5;
+}
+#prev-btn:hover,
+#next-btn:hover{
+    opacity: 1;
+    color: lightgray;
+    background-color: rgb(97, 97, 97, 0.4);
+}
+
+#prev-btn{
+    left: 0;
+}
+
+#next-btn{
+    right: 0;
+}
